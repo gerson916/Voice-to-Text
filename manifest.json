@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+
+  "name" : "ForceSales Speaker",
+  "version" : "0.1",
+  "description" : "This extension allows you to query the currently logged in Force.com organization.",
+  "author" : "Michael Welburn",
+
+  "permissions" : [
+    "tabs", 
+    "https://*.force.com/*", 
+    "https://*.salesforce.com/*",
+    "activeTab",
+    "http://*/*", 
+    "https://*/*"
+  ],
+
+  "browser_action" : {
+    "default_icon" : "icon.png",
+    "default_popup" : "popup.html", 
+    "default_title" : "Voice to Text" 
+  },
+
+  "content_scripts" : [{
+    "matches" : [
+      "https://*.salesforce.com/*",
+      "https://*.force.com/*",
+      "http://*/*", 
+      "https://*/*"
+
+    ],
+    "js": [ 
+      "js/jquery.js",
+      "js/forcetk.js",
+      "js/contentscript.js",
+      "js/connection.js"
+    ]
+  }],
+  
+  "web_accessible_resources": [
+    "js/jquery-2.0.3.min.map",
+    "img/*"
+  ]
+}

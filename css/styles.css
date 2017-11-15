@@ -1,0 +1,20 @@
+.speech {
+	border: 1px solid #DDD; 
+	width: 300px; 
+	padding: 0 10px; 
+	margin: 10px
+}
+.speech input {
+	border: 0; 
+	width: 240px; 
+	display: inline-block; 
+	height: 30px;
+}
+.speech img {
+	float: right; 
+	width: 30px 
+}
+
+.mic-enable {
+  background-color: red;
+}
